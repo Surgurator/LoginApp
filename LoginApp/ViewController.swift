@@ -17,6 +17,9 @@ class ViewController: UIViewController {
             welcomeController.userNameWelcome = String("Welcome \(userNameTextF.text!)")
         }
     }
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
     // MARK: - IBActions
     
     @IBAction func unwind(for segue: UIStoryboardSegue) {
