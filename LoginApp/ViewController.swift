@@ -18,7 +18,7 @@ class ViewController: UIViewController {
         }
     }
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        self.view.endEditing(true)
+        view.endEditing(true)
     }
     // MARK: - IBActions
     
@@ -32,48 +32,30 @@ class ViewController: UIViewController {
         if userNameTextF.text == "User", passwordTextF.text == "Password"{
             performSegue(withIdentifier: "welcomeSegue", sender: nil)
         } else {
-            alertLoginPass()
+            alertLoginShow(
+                title: "Авторизация невозможна",
+                message: "Неверно введен логин или пароль")
             }
             passwordTextF.text = ""
         }
     
     
     @IBAction func forgotUserNameButton() {
-        alertLoginShow()
+        alertLoginShow(title: "Логин", message: "User")
     }
     
     @IBAction func forgotPassButton() {
+        alertLoginShow(title: "Пароль", message: "Password")
+    }
+    
 
-        alertPassShow()
-    }
-    func alertLoginPass(){
-        let alert = UIAlertController(
-            title: "Авторизация невозможна",
-            message: "Неверно введен логин или пароль",
-            preferredStyle: .alert)
-        let buttonOK = UIAlertAction(title: "OK", style: .default)
-        alert.addAction(buttonOK)
-        present(alert, animated: true)
-    }
- 
-func alertLoginShow(){
-    let showLogin = UIAlertController(
-        title: "Логин",
-        message: "User",
+   private func alertLoginShow(title: String, message: String){
+     let showLogin = UIAlertController(
+        title: title,
+        message: message,
         preferredStyle: .alert)
     let buttonOK = UIAlertAction(title: "OK", style: .default)
     showLogin.addAction(buttonOK)
     present(showLogin, animated: true)
 }
-
-    func alertPassShow(){
-        let showPass = UIAlertController(
-            title: "Пароль",
-            message: "Password",
-            preferredStyle: .alert)
-        let buttonOK = UIAlertAction(title: "OK", style: .default)
-        showPass.addAction(buttonOK)
-        present(showPass, animated: true)
-    }
-
 }
