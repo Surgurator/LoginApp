@@ -12,13 +12,18 @@ class ViewController: UIViewController {
     @IBOutlet var userNameTextF: UITextField!
     @IBOutlet var passwordTextF: UITextField!
     
-    private let userName = "User"
-    private let password = "Password"
+    private let User = UserData()
+
     
     // MARK: - override func
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let welcomeController = segue.destination as? WelcomeViewController {
-            welcomeController.userNameWelcome = String("Welcome \(userNameTextF.text!)")
+        guard let tabBarController = segue.destination as? UITabBarController else { return }
+        guard let viewControllers = tabBarController.viewControllers else { return }
+        
+        for viewController in viewControllers {
+            if let welcomeController = viewController as? WelcomeViewController {
+                welcomeController.userNameWelcome = String("Welcome \(User.name)")
+            }
         }
     }
     
@@ -35,7 +40,8 @@ class ViewController: UIViewController {
     }
     
     @IBAction func logInButton(_ sender: UIButton) {
-        if userNameTextF.text == userName, passwordTextF.text == password{
+ 
+        if userNameTextF.text == User.userLogin, passwordTextF.text == User.password{
             performSegue(withIdentifier: "welcomeSegue", sender: nil)
         } else {
             alertLoginShow(
@@ -46,11 +52,11 @@ class ViewController: UIViewController {
     }
     
     @IBAction func forgotUserNameButton() {
-        alertLoginShow(title: "Логин", message: userName)
+        alertLoginShow(title: "Логин", message: User.userLogin)
     }
     
     @IBAction func forgotPassButton() {
-        alertLoginShow(title: "Пароль", message: password)
+        alertLoginShow(title: "Пароль", message: User.password)
     }
     
     private func alertLoginShow(title: String, message: String){

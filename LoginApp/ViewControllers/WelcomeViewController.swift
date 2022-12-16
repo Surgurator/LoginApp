@@ -17,6 +17,6 @@ class WelcomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         userWelcome.text = userNameWelcome
-        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "backGround")!)
+        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "Back")!)
     }
 }
