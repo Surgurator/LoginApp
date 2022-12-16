@@ -7,7 +7,7 @@
 
 import UIKit
 
-class HobbyController: UIViewController {
+final class HobbyController: UIViewController {
     
     @IBOutlet var hobbyImage: UIImageView!
     @IBOutlet var aboutMyHobby: UILabel!

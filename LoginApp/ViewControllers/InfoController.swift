@@ -7,7 +7,7 @@
 
 import UIKit
 
-class InfoController: UIViewController {
+final class InfoController: UIViewController {
     
     @IBOutlet var employment: UILabel!
     @IBOutlet var workSchedule: UILabel!

@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+final class ViewController: UIViewController {
     // MARK: - IBOtlets and properties
     @IBOutlet var userNameTextF: UITextField!
     @IBOutlet var passwordTextF: UITextField!
