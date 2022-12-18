@@ -20,13 +20,13 @@ final class InfoController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        guard  case view.backgroundColor = UIColor(patternImage: UIImage(named: "Back") ?? UIImage()) else { return }
-        photo.image = UIImage(named: "photo")
         title = userInfo.person.name
         employment.text = userInfo.person.emplyment
         workSchedule.text = userInfo.person.workSchedule
         desiredSalary.text = userInfo.person.desiredSalary
         desiredSalary.text = userInfo.person.workExperience
+     view.backgroundColor = UIColor(patternImage: UIImage(named: "Back")!) 
+        photo.image = UIImage(named: "photo")
     }
 }
 

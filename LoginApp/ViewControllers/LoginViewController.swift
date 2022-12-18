@@ -23,8 +23,8 @@ final class LoginViewController: UIViewController {
         
         for viewController in viewControllers {
             if let welcomeController = viewController as? WelcomeViewController {
-                welcomeController.userNameWelcome = String("Welcome \(user.userLogin)")
-            } else if let infoController = viewController as? InfoController{
+                welcomeController.userNameWelcome = String("Welcome \(user.person.name)")
+            } else if let infoController = viewController as? InfoController {
                 infoController.userInfo = user
             } else if let hobbyController = viewController as? HobbyController {
                 hobbyController.userHobby = user
@@ -74,13 +74,3 @@ final class LoginViewController: UIViewController {
         }
     }
 
-//            } else if let infoController = viewController as? InfoController {
-//                infoController.title = user.person.name
-//                infoController.employment.text = user.person.emplyment
-//                infoController.workSchedule.text = user.person.workSchedule
-//                infoController.desiredSalary.text = user.person.desiredSalary
-//                infoController.desiredSalary.text = user.person.workExperience
-//            } else if let hobbyController = viewController as? HobbyController {
-//                hobbyController.myHobbyLabel.text = user.person.hobby.hobbyName
-//                hobbyController.aboutMyHobby.text = user.person.hobby.aboutHobbyText
-//            }
