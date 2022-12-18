@@ -12,7 +12,7 @@
 		8ABA9898294A599F00F8E5B1 /* HobbyController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ABA9897294A599F00F8E5B1 /* HobbyController.swift */; };
 		8AC128E4293BB25700F25C39 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC128E3293BB25700F25C39 /* AppDelegate.swift */; };
 		8AC128E6293BB25700F25C39 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC128E5293BB25700F25C39 /* SceneDelegate.swift */; };
-		8AC128E8293BB25700F25C39 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC128E7293BB25700F25C39 /* ViewController.swift */; };
+		8AC128E8293BB25700F25C39 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC128E7293BB25700F25C39 /* LoginViewController.swift */; };
 		8AC128EB293BB25700F25C39 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8AC128E9293BB25700F25C39 /* Main.storyboard */; };
 		8AC128ED293BB25800F25C39 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8AC128EC293BB25800F25C39 /* Assets.xcassets */; };
 		8AC128F0293BB25800F25C39 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8AC128EE293BB25800F25C39 /* LaunchScreen.storyboard */; };
@@ -27,7 +27,7 @@
 		8AC128E0293BB25700F25C39 /* LoginApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LoginApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8AC128E3293BB25700F25C39 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8AC128E5293BB25700F25C39 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		8AC128E7293BB25700F25C39 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		8AC128E7293BB25700F25C39 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		8AC128EA293BB25700F25C39 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8AC128EC293BB25800F25C39 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8AC128EF293BB25800F25C39 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -60,7 +60,7 @@
 		8ABA988D2949D59500F8E5B1 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				8AC128E7293BB25700F25C39 /* ViewController.swift */,
+				8AC128E7293BB25700F25C39 /* LoginViewController.swift */,
 				8AC128F7293D047600F25C39 /* WelcomeViewController.swift */,
 				8ABA9895294A596C00F8E5B1 /* InfoController.swift */,
 				8ABA9897294A599F00F8E5B1 /* HobbyController.swift */,
@@ -195,7 +195,7 @@
 			files = (
 				8AF449FC294D36A30037C05B /* hobbyMdel.swift in Sources */,
 				8ABA9894294A456100F8E5B1 /* infoModel.swift in Sources */,
-				8AC128E8293BB25700F25C39 /* ViewController.swift in Sources */,
+				8AC128E8293BB25700F25C39 /* LoginViewController.swift in Sources */,
 				8AC128F8293D047600F25C39 /* WelcomeViewController.swift in Sources */,
 				8AC128E4293BB25700F25C39 /* AppDelegate.swift in Sources */,
 				8AC128E6293BB25700F25C39 /* SceneDelegate.swift in Sources */,

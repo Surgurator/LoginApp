@@ -12,14 +12,14 @@ final class HobbyController: UIViewController {
     @IBOutlet var hobbyImage: UIImageView!
     @IBOutlet var aboutMyHobby: UILabel!
     @IBOutlet var myHobbyLabel: UILabel!
-    private let alexHobby = HobbyInfo.alexHobby()
+    
+    var  userHobby: UserData!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "Back")!)
-        
+        guard  case view.backgroundColor = UIColor(patternImage: UIImage(named: "Back") ?? UIImage()) else { return }
         hobbyImage.image = UIImage(named: "snowBoard")
-        myHobbyLabel.text = alexHobby.hobbyName
-        aboutMyHobby.text = alexHobby.aboutHobbyText
+        myHobbyLabel.text = userHobby.person.hobby.hobbyName
+        aboutMyHobby.text = userHobby.person.hobby.aboutHobbyText
     }
 }

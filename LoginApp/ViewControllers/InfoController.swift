@@ -16,20 +16,17 @@ final class InfoController: UIViewController {
     
     @IBOutlet var photo: UIImageView!
     
-    private let alex = UserData()
-    private let alexPerson = PersonInfo.alexPerson()
+    var userInfo: UserData!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "Back")!)
+        guard  case view.backgroundColor = UIColor(patternImage: UIImage(named: "Back") ?? UIImage()) else { return }
         photo.image = UIImage(named: "photo")
-        self.navigationItem.title = alex.name
-        
-        employment.text = alexPerson.emplyment
-        workSchedule.text = alexPerson.workSchedule
-        desiredSalary.text = alexPerson.desiredSalary
-        workExperience.text = alexPerson.workExperience
+        title = userInfo.person.name
+        employment.text = userInfo.person.emplyment
+        workSchedule.text = userInfo.person.workSchedule
+        desiredSalary.text = userInfo.person.desiredSalary
+        desiredSalary.text = userInfo.person.workExperience
     }
 }
 
