@@ -18,6 +18,6 @@ final class WelcomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         userWelcome.text = userNameWelcome
-        guard  case view.backgroundColor = UIColor(patternImage: UIImage(named: "Back") ?? UIImage()) else { return }
+       view.backgroundColor = UIColor(patternImage: UIImage(named: "Back") ?? UIImage())
     }
 }

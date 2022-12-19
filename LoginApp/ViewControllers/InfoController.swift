@@ -24,8 +24,8 @@ final class InfoController: UIViewController {
         employment.text = userInfo.person.emplyment
         workSchedule.text = userInfo.person.workSchedule
         desiredSalary.text = userInfo.person.desiredSalary
-        desiredSalary.text = userInfo.person.workExperience
-     view.backgroundColor = UIColor(patternImage: UIImage(named: "Back")!) 
+        workExperience.text = userInfo.person.workExperience
+     view.backgroundColor = UIColor(patternImage: UIImage(named: "Back") ?? UIImage()) 
         photo.image = UIImage(named: "photo")
     }
 }

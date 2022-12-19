@@ -17,7 +17,7 @@ final class HobbyController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        guard  case view.backgroundColor = UIColor(patternImage: UIImage(named: "Back") ?? UIImage()) else { return }
+        view.backgroundColor = UIColor(patternImage: UIImage(named: "Back") ?? UIImage())
         hobbyImage.image = UIImage(named: "snowBoard")
         myHobbyLabel.text = userHobby.person.hobby.hobbyName
         aboutMyHobby.text = userHobby.person.hobby.aboutHobbyText

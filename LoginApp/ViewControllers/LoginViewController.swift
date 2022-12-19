@@ -24,13 +24,15 @@ final class LoginViewController: UIViewController {
         for viewController in viewControllers {
             if let welcomeController = viewController as? WelcomeViewController {
                 welcomeController.userNameWelcome = String("Welcome \(user.person.name)")
-            } else if let infoController = viewController as? InfoController {
+            } else if let navigationController = viewController as? UINavigationController {
+                guard let infoController = navigationController.topViewController as? InfoController else { return }
                 infoController.userInfo = user
             } else if let hobbyController = viewController as? HobbyController {
                 hobbyController.userHobby = user
             }
         }
     }
+
         override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
             super.touchesBegan(touches, with: event)
             view.endEditing(true)
